@@ -2,6 +2,10 @@ require 'sinatra'
 require 'json'
 require 'open-uri'
 
+get '/:room' do
+  content_type :text
+  "http://lingr.com/room/#{params[:room]} 用のエンドポイントです。\n.travis.yamlのnotificationのWebHookのurlsに入れると動きます。"
+end
 post '/:room' do
   content_type :text
   travis = JSON.parse(request.body.read)
