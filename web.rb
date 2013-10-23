@@ -4,7 +4,7 @@ require 'open-uri'
 
 get '/:room' do
   content_type :text
-  "http://lingr.com/room/#{params[:room]} 用のエンドポイントです。\n.travis.yamlのnotificationのWebHookのurlsに入れると動きます。"
+  "http://lingr.com/room/#{params[:room]} 用のエンドポイントです。\nhttp://lingr.com/bot/travis_ciを部屋に追加してから、.travis.ymlのnotificationのWebHookのurlsに入れると動きます。"
 end
 post '/:room' do
   content_type :text
