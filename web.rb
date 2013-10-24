@@ -2,10 +2,20 @@ require 'sinatra'
 require 'json'
 require 'open-uri'
 
+get '/' do
+  content_type :text
+  "travis-ciのnotificationをLingrに通知するためのBotです。"
+end
+
+post '/' do
+  ""
+end
+
 get '/:room' do
   content_type :text
   "http://lingr.com/room/#{params[:room]} 用のエンドポイントです。\nhttp://lingr.com/bot/travis_ciを部屋に追加してから、.travis.ymlのnotificationのWebHookのurlsに入れると動きます。"
 end
+
 post '/:room' do
   content_type :text
   travis = JSON.parse(request.body.read)
