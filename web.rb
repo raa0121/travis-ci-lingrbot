@@ -18,7 +18,7 @@ end
 
 post '/:room' do
   content_type :text
-  travis = JSON.parse(request.body.read)
+  travis = JSON.parse(request.body.read.sub("payload=",""))
   repo = travis['payload']['repository']
   status = travis['payload']['status_message']
   compare = travis['payload']['compare_url']
