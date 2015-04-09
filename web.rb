@@ -24,6 +24,7 @@ post '/:room' do
   status = travis['status_message']
   compare = travis['compare_url']
   commit = travis['message']
-  text = CGI.escape("[#{repo['owner_name']}/#{repo['name']}]#{status}:#{commit}\n#{compare}\nhttps://travis-ci.org/#{repo['owner_name']}/#{repo['name']}/builds")
+  build = travis['build_url']
+  text = CGI.escape("[#{repo['owner_name']}/#{repo['name']}]#{status}:#{commit}\n#{compare}\n#{build}")
   open("http://lingr.com/api/room/say?room=#{params[:room]}&bot=travis_ci&text=#{text}&bot_verifier=255c91a32fc7e70b3421129ad0251df6c2c897d4").read
 end
