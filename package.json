@@ -1,0 +1,23 @@
+{
+  "name": "travis-ci-lingrbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raa0121/travis-ci-lingrbot.git"
+  },
+  "dependencies": {
+    "express": "*",
+    "coffee-script": "*"
+  },
+  "author": "raa0121 <raa0121@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raa0121/travis-ci-lingrbot/issues"
+  },
+  "homepage": "https://github.com/raa0121/travis-ci-lingrbot"
+}
