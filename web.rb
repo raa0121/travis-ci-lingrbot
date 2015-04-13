@@ -3,6 +3,8 @@ require 'json'
 require 'open-uri'
 require 'cgi'
 
+$stdout.sync = true
+
 get '/' do
   content_type :text
   "travis-ciのnotificationをLingrに通知するためのBotです。"
@@ -19,6 +21,7 @@ end
 
 post '/:room' do
   content_type :text
+  puts params
   travis = JSON.parse(params[:payload])
   repo = travis['repository']
   status = travis['status_message']
