@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "express": "*",
-    "coffee-script": "*"
+    "coffee-script": "*",
+    "body-parser": "*"
   },
   "author": "raa0121 <raa0121@gmail.com>",
   "license": "MIT",

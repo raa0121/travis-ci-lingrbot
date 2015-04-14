@@ -1,13 +1,16 @@
 express = require("express")
+bodyParser = require("body-parser")
 http = require("http")
 
 app = express()
+app.use bodyParser.urlencoded({ extended: true })
 
 app.get "/:room(\\w+$)", (req, res) ->
   res.send "http://lingr.com/room/#{req.params.room} 用のエンドポイントです。\nhttp://lingr.com/bot/travis_ciを部屋に追加してから、.travis.ymlのnotificationのWebHookのurlsに入れると動きます。"
 
 app.post '/:room(\\w+$)', (req, res) ->
-  travis = JSON.parse(req.params.payload)
+  #console.log(req.body)
+  travis = JSON.parse(req.body.payload)
   repo = travis['repository']
   status = travis['status_message']
   compare = travis['compare_url']
