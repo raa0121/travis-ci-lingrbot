@@ -7,6 +7,4 @@ script:
 
 notifications:
   webhooks:
-    - http://travis-ci-lingrbot.raa0121.info/ruby/sandbox
-    - http://travis-ci-lingrbot.raa0121.info/python/sandbox
-    - http://travis-ci-lingrbot.raa0121.info/node/sandbox
+    - http://travis-ci-lingrbot.raa0121.info/sandbox
