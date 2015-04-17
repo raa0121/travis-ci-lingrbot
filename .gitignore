@@ -1,3 +1,4 @@
 *.swp
 vender/
 node_modules/
+local/
